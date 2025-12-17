@@ -20,9 +20,9 @@
         </div>
 
         <!-- Iconos de servicios -->
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-5 d-none d-md-flex">
           <!-- Armed/Unarmed Security -->
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
             <div class="service-item text-center">
               <div class="service-icon mb-3">
                 <img src="/images/icono-armed.svg" alt="Armed/Unarmed Security" />
@@ -32,7 +32,7 @@
           </div>
 
           <!-- Access Control -->
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
             <div class="service-item text-center">
               <div class="service-icon mb-3">
                 <img src="/images/icono-access.svg" alt="Access Control" />
@@ -42,7 +42,7 @@
           </div>
 
           <!-- Security Patrol -->
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
             <div class="service-item text-center">
               <div class="service-icon mb-3">
                 <img src="/images/icono-security.svg" alt="Security Patrol" />
@@ -52,7 +52,7 @@
           </div>
 
           <!-- Personal Protection -->
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
             <div class="service-item text-center">
               <div class="service-icon mb-3">
                 <img src="/images/icono-personal.svg" alt="Personal Protection" />
@@ -62,7 +62,7 @@
           </div>
 
           <!-- Off-Duty Police -->
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
             <div class="service-item text-center">
               <div class="service-icon mb-3">
                 <img src="/images/icono-off-duty.svg" alt="Off-Duty Police" />
@@ -72,6 +72,65 @@
           </div>
         </div>
 
+         <div class="row justify-content-start mb-5 d-block d-md-none">
+
+          <!-- Armed/Unarmed Security -->
+            <div class="col-lg-2 col-md-4 col-12 mb-4 p-0">
+              <div class="service-item ">
+                <div class="service-icon d-flex justify-content-start gap-2 mb-3">
+                  <img src="/images/icono-armed.svg" alt="Armed/Unarmed Security" />
+                
+                <h4 class="service-name">ARMED/UNARMED SECURITY</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Access Control -->
+            <div class="col-lg-2 col-md-4 col-12 mb-4 p-0">
+              <div class="service-item ">
+                <div class="service-icon d-flex justify-content-start gap-2 mb-3">
+                  <img src="/images/icono-access.svg" alt="Access Control" />
+                
+                <h4 class="service-name">ACCESS CONTROL</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Security Patrol -->
+            <div class="col-lg-2 col-md-4 col-12 mb-4 p-0">
+              <div class="service-item ">
+                <div class="service-icon d-flex justify-content-start gap-2 mb-3">
+                  <img src="/images/icono-security.svg" alt="Security Patrol" />
+                
+                <h4 class="service-name">SECURITYPATROL</h4>
+                
+              </div>
+            </div>
+          </div>
+            <!-- Personal Protection -->
+            <div class="col-lg-2 col-md-4 col-12 mb-4 p-0">
+              <div class="service-item ">
+                <div class="service-icon d-flex justify-content-start gap-2 mb-3">
+                  <img src="/images/icono-personal.svg" alt="Personal Protection" />
+              
+                <h4 class="service-name">PERSONAL PROTECTION<br>OFFICERS</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Off-Duty Police -->
+            <div class="col-lg-2 col-md-4 col-12 mb-4 p-0">
+              <div class="service-item ">
+                <div class="service-icon d-flex justify-content-start gap-2 mb-3">
+                  <img src="/images/icono-off-duty.svg" alt="Off-Duty Police" />
+                
+                <h4 class="service-name">OFF-DUTY POLICE SECURITY <br>AND TRAFFIC CONTROL</h4>
+                </div>
+              </div>
+            </div>
+        
+
+      </div>
         <!-- Botón Get a Quote -->
         <div class="row">
           <div class="col-12 text-center">
@@ -84,7 +143,9 @@
     <!-- Industries We Serve -->
     <div id="industries" class="industries-section">
       <div class="container">
-        <div class="col-md-12">
+
+
+        <div class="col-md-12 d-none d-md-block">
             <div class="row industries-section-block">
 
               <div class="col-md-12">
@@ -190,6 +251,119 @@
 
             </div>
         </div>
+
+        
+          <div class="col-md-12 d-block d-md-none p-3">
+            <div class="row industries-section-block">
+
+              <div class="col-md-12">
+
+                      <div class="row">
+                        <div class="col-12 text-center mb-5">
+                          <div class="section-title">
+                            <h2 class="title-text">INDUSTRIES WE SERVE</h2>
+                            <div class="title-icon">
+                              <img src="/images/icono-tap-titulos.svg" alt="TAP Security Icon" class="title-logo" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row g-4">
+                        <!-- Commercial Security -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/commercial-security" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-commercial-security.jpg" alt="Commercial Security" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Commercial Security</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Diplomatic Mission -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/diplomatic-mission" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-diplomatic-industry.jpg" alt="Diplomatic Mission" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Diplomatic Mission</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Hospitality Security -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/hospitality-security" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-hospitality-security.jpg" alt="Hospitality Security" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Hospitality Security</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Industrial Security -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/industrial-security" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-industrial-security.jpg" alt="Industrial Security" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Industrial Security</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Medical Security -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/medical-security" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-medical-security.jpg" alt="Medical Security" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Medical Security</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Residential Security -->
+                        <div class="col-lg-4 col-md-6">
+                          <a href="https://tap-security.com/industry/residential-security" target="_blank" rel="noopener noreferrer" class="industry-link">
+                            <div class="industry-card">
+                              <div class="industry-image">
+                                <img src="/images/industrias-residential-security.jpg" alt="Residential Security" />
+                                <div class="industry-overlay">
+                                  <h3 class="industry-title">Residential Security</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+              </div>
+
+            </div>
+        </div>
+
+
+
+
+
       </div>
     </div>
   </section>
@@ -404,16 +578,21 @@
 
 @media (max-width: 768px) {
   .integration-text {
-    font-size: 1.1rem;
+    font-size: 26px;
+    padding: 0 !important;
   }
   
-  .service-name {
-    font-size: 0.8rem;
-  }
+      .service-name {
+        font-size: 17px;
+        font-weight: bold;
+    }
   
-  .title-text {
-    font-size: 2rem;
-  }
+  .title-text{
+        font-size: 43px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        padding-top: 5rem;
+    }
   
   .industry-card {
     height: 200px;
@@ -422,6 +601,11 @@
   .industry-title {
     font-size: 1.1rem;
   }
+  .industries-section-block {
+    background-color: #c1272d;
+     padding: 0;
+    padding-bottom: 5rem;
+}
 }
 
 @media (max-width: 576px) {
@@ -431,7 +615,7 @@
   }
   
   .logo-img {
-    height: 60px;
+    height: 150px;
   }
   
   .service-icon {
@@ -439,20 +623,23 @@
   }
   
   .service-icon img {
-    height: 45px;
+    height: 80px;
   }
   
-  .service-name {
-    font-size: 0.75rem;
-  }
+      .service-name{
+        font-size: 17px;
+        font-weight: bold;
+    }
   
-  .title-text {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
+    .title-text{
+        font-size: 43px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        padding-top: 5rem;
+    }
   
   .integration-text {
-    font-size: 1rem;
+    font-size: 26px;
     padding: 0 1rem;
   }
 }

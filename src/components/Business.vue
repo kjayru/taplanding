@@ -7,7 +7,7 @@
         <!-- Card a 3 columnas (como la referencia) -->
         <div class="row g-3 align-items-stretch testimonial-card">
           <!-- Columna IZQUIERDA: nombre, cargo y quote -->
-          <div class="col-lg-3 col-md-12 order-2 order-lg-1 bg-white  left-rail">
+          <div class="col-lg-3 col-md-12 order-1 order-lg-1 bg-white  left-rail">
             <div class="testimonial-header">
               <h2 class="person-name">Oscar<br />Gonzalez</h2>
               <p class="person-title">Founder &amp; President</p>
@@ -19,10 +19,11 @@
                 “I believe the success of a business is rooted in the satisfaction of one’s clients.”
               </blockquote>
             </div>
+             <div class="title-underline d-block d-sm-none"></div>
           </div>
 
           <!-- Columna CENTRAL: retrato con fondo azul -->
-          <div class="col-lg-4 col-md-12 order-1 order-lg-2 image-rail">
+          <div class="col-lg-4 col-md-12 order-2 order-lg-2 image-rail">
             <div class="portrait-wrap" style="background-image: url('/images/Oscar-gzz.jpg');">
               <!-- Imagen como fondo -->
             </div>
@@ -75,56 +76,56 @@
 
         <div class="row align-items-center justify-content-center g-4">
           <!-- Spectrum -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-Spectrum-Logo.png" alt="Spectrum" class="img-fluid" />
             </div>
           </div>
 
           <!-- Apple -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-apple.png" alt="Apple" class="img-fluid" />
             </div>
           </div>
 
           <!-- SRE -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-Consulado-SRE-Blanco.png" alt="SRE Consulado" class="img-fluid" />
             </div>
           </div>
 
           <!-- Albany -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-albany.png" alt="Albany" class="img-fluid" />
             </div>
           </div>
 
           <!-- CoSA -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/cliente-CoSA-Logo.png" alt="CoSA" class="img-fluid" />
             </div>
           </div>
 
           <!-- Catholic Charities -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/cliente-Catholic-Charities.png" alt="Catholic Charities" class="img-fluid" />
             </div>
           </div>
 
           <!-- Maruchan -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-maruchan.png" alt="Maruchan" class="img-fluid" />
             </div>
           </div>
 
           <!-- Mexican Culture -->
-          <div class="col-lg-3 col-md-3 col-4">
+          <div class="col-lg-3 col-md-3 col-6">
             <div class="client-logo">
               <img src="/images/Cliente-MexicanCultureBlanco.png" alt="Mexican Culture" class="img-fluid" />
             </div>
@@ -396,7 +397,42 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
 @media (max-width: 768px) {
   .testimonial-section { padding: 40px 0; }
   .portrait { max-width: 360px; }
-  .left-rail { border-right: 0; border-top: 1px solid rgba(0,0,0,.06); }
+  .left-rail { 
+    border-right: 0; 
+    border-top: 1px solid rgba(0,0,0,.06);
+    min-height: auto;
+  }
+  .portrait-wrap {
+      min-height: 600px;
+      width: 100%;
+      max-width: 100%;
+      background-size: cover;
+  }
+  .main-quote {
+    font-size: 30px;
+    line-height: 1.35;
+    color: #010B40;
+    font-weight: 800;
+    font-style: normal;
+    quotes: "“" "”" "‘" "’";
+    padding-right: 3rem;
+  }
+  .title-underline{
+    width: 86%;
+    height: 1px;
+    background-color: #E01F26;
+  }
+  .person-name::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 86%;
+      height: 1px;
+      background-color: #E01F26;
+  }
+
+
 }
 
 @media (max-width: 576px) {

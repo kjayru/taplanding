@@ -19,7 +19,7 @@
         <div class="col-lg-9 col-md-9 mb-4">
           <div class="row">
             <!-- Home Column -->
-            <div class="col-lg-3 col-md-6 mb-3">
+            <div class="col-lg-3 col-md-6 mb-3 col-6 order-1 order-sm-1">
               <div class="footer-links">
                 <h6 class="footer-link-title">Home</h6>
                 <ul class="footer-nav-list">
@@ -30,7 +30,7 @@
             </div>
 
             <!-- Employment Column -->
-            <div class="col-lg-3 col-md-6 mb-3">
+            <div class="col-lg-3 col-md-6 mb-3 col-6 order-2 order-sm-2">
               <div class="footer-links">
                 <h6 class="footer-link-title">Employment</h6>
                 <ul class="footer-nav-list">
@@ -41,7 +41,7 @@
             </div>
 
             <!-- Training Academy Column -->
-            <div class="col-lg-3 col-md-6 mb-3">
+            <div class="col-lg-3 col-md-6 mb-3 col-6 order-3 order-sm-3">
               <div class="footer-links">
                 <h6 class="footer-link-title">Training academy</h6>
                 <ul class="footer-nav-list">
@@ -52,7 +52,7 @@
             </div>
 
             <!-- More Column -->
-            <div class="col-lg-3 col-md-6 mb-3">
+            <div class="col-lg-3 col-md-6 mb-3 col-6 order-4 order-sm-4">
               <div class="footer-links">
                 <h6 class="footer-link-title">&nbsp;&nbsp;</h6>
                 <ul class="footer-nav-list">
@@ -79,12 +79,20 @@
               <p class="footer-info-text">Tel: (210) 399-1116</p>
             </div>
           </div>
-          <div class="col-md-6 mb-3">
+          <div class="col-md-6 mb-3 d-none d-md-block">
             <div class="footer-contact-info">
               <p class="footer-info-text">11503 Jones Maltsberger Rd, Ste 1158</p>
               <p class="footer-info-text">San Antonio, TX 78216</p>
             </div>
           </div>
+
+           <div class="col-md-6 mb-3 d-block d-md-none">
+            <div class="footer-contact-info text-start">
+              <p class="footer-info-text">11503 Jones Maltsberger Rd, Ste 1158</p>
+              <p class="footer-info-text">San Antonio, TX 78216</p>
+            </div>
+          </div>
+
         </div>
 
         <!-- Second Divider Line -->
@@ -93,16 +101,31 @@
 
          <div class="row">
           <div class="col-12">
-            <div class="footer-bottom">
+            
+            <div class="footer-bottom d-block d-sm-none">
               <div class="footer-bottom-content">
-                <p class="copyright-text">
+                <p class="copyright-text text-start">
                   2025 All Rights Reserved for Texas Asset Protection, LLC ©
                 </p>
-                <p class="design-credit">
+                <p class="design-credit text-start">
                   Design by: <a href="https://cobos.com.mx" target="_blank" rel="noopener noreferrer" class="cobo-link">Cobo's</a>
                 </p>
               </div>
             </div>
+
+
+            <div class="footer-bottom d-none d-sm-block">
+              <div class="footer-bottom-content">
+                <p class="copyright-text">
+                  2025 All Rights Reserved for Texas Asset Protection, LLC ©
+                </p>
+                <p class="design-credit text-start">
+                  Design by: <a href="https://cobos.com.mx" target="_blank" rel="noopener noreferrer" class="cobo-link">Cobo's</a>
+                </p>
+              </div>
+            </div>
+
+
           </div>
         </div>
 
@@ -314,6 +337,11 @@
   .footer-logo-img {
     height: 60px;
   }
+  .design-credit {
+    text-align: left !important;
+    display: block;
+      width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -332,6 +360,11 @@
   
   .footer-link-title {
     font-size: 0.9rem;
+  }
+  .design-credit {
+      text-align: left !important;
+    display: block;
+      width: 100%;
   }
 }
 </style>

@@ -2,7 +2,8 @@
   <!-- Home Section -->
   <section id="home" class="home-section">
     <div class="container-fluid">
-      <div class="row align-items-center min-vh-100">
+
+      <div class="row align-items-center min-vh-100 d-none d-md-flex">
         <!-- Contenido central -->
         <div class="col-12 home-content text-center">
           <!-- Texto principal -->
@@ -19,6 +20,27 @@
           </div>
         </div>
       </div>
+
+
+      <div class="row align-items-start mt-5 min-vh-100 d-flex d-md-none">
+        <!-- Contenido central -->
+        <div class="col-12 home-content text-center">
+          <!-- Texto principal -->
+          <div class="home-text mb-4">
+            <h1 class="home-title">
+              YOUR <span class="text-danger">SECURITY</span><br>
+              IS OUR BUSINESS
+            </h1>
+          </div>
+          
+          <!-- Logo central -->
+          <div class="home-logo">
+            <img src="/images/logo.png" alt="TAP Security Logo" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </section>
 </template>
@@ -110,7 +132,7 @@
   }
   
   .home-logo img {
-    width: 300px !important;
+    width: 220px !important;
   }
   
   .home-section {
@@ -130,7 +152,7 @@
   }
   
   .home-logo img {
-    width: 250px !important;
+    width: 150px !important;
   }
   
   .home-content {
@@ -145,7 +167,7 @@
   }
   
   .home-logo img {
-    width: 200px !important;
+    width: 150px !important;
   }
   
   .home-content {

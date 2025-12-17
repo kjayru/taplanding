@@ -243,13 +243,11 @@
 
 @media (max-width: 768px) {
   .blog-title {
-    font-size: 2.5rem;
+    font-size: 40px;
     letter-spacing: 2px;
+    line-height: 30px;
   }
   
-  .blog-card {
-    height: 280px;
-  }
   
   .blog-article-title {
     font-size: 0.95rem;
@@ -258,22 +256,38 @@
   .blog-content {
     padding: 1rem;
   }
+  .blog-article-title::after {
+      content: "";
+      background: url(/images/arrow.png) no-repeat;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      right: -18px;
+      top: 6px;
+  }
+    .blog-card {
+        height: 315px;
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 576px) {
   .blog-section {
     padding: 40px 0;
   }
-  
-  .blog-title {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-  
   .blog-card {
-    height: 250px;
-    margin-bottom: 1rem;
+        height: 315px;
+        margin-bottom: 1rem;
+    }
+  
+   .blog-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 30px;
   }
+  
+  
+  
   
   .blog-article-title {
     font-size: 0.9rem;
@@ -281,6 +295,15 @@
   
   .blog-content {
     padding: 0.8rem;
+  }
+  .blog-article-title::after {
+      content: "";
+      background: url(/images/arrow.png) no-repeat;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      right: -18px;
+      top: 6px;
   }
 }
 

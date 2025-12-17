@@ -20,7 +20,7 @@
       <!-- Online Courses y In-Person Training -->
       <div class="row mb-5 align-items-center">
         <!-- Online Courses -->
-        <div class="col-lg-6 col-md-12 mb-4">
+        <div class="col-lg-6 col-md-12 mb-4 order-sm-1 order-2">
           <div class="training-block">
             <h3 class="training-title">ONLINE COURSES</h3>
             <p class="training-description">
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Video Online Courses -->
-        <div class="col-lg-6 col-md-12 mb-4">
+        <div class="col-lg-6 col-md-12 mb-4 order-sm-2 order-1">
           <div class="video-container">
             <img src="/images/training-online-courses.png" alt="Online Courses Video" class="training-video" />
             <div class="video-overlay">
@@ -51,7 +51,7 @@
       <!-- In-Person Training -->
       <div class="row mb-5 align-items-center">
         <!-- Video In-Person Training -->
-        <div class="col-lg-6 col-md-12 mb-4 order-lg-1 order-2">
+        <div class="col-lg-6 col-md-12 mb-4 order-lg-1 order-sm-2 order-1">
           <div class="video-container">
             <img src="/images/training-in-person.png" alt="In-Person Training Video" class="training-video" />
             <div class="video-overlay">
@@ -66,7 +66,7 @@
         </div>
 
         <!-- In-Person Training Content -->
-        <div class="col-lg-6 col-md-12 mb-4 order-lg-2 order-1">
+        <div class="col-lg-6 col-md-12 mb-4 order-lg-2 order-2 order-s-1">
           <div class="training-block">
             <h3 class="training-title">IN-PERSON TRAINING</h3>
             <p class="training-description">
@@ -466,17 +466,33 @@ if (typeof window !== 'undefined') {
 
 @media (max-width: 768px) {
   .title-text {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+           font-size: 70px;
+        letter-spacing: 1px;
+        line-height: 79px;
   }
   
   .training-title {
-    font-size: 1.6rem;
+   font-size: 40px;
+        text-align: left;
   }
   
   .courses-title {
-    font-size: 1.8rem;
+    font-size: 40px;
   }
+
+    .course-image img {
+        height: 245px;
+    }
+
+  .training-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E01F26;
+}
   
   .training-video {
     height: 200px;
@@ -484,22 +500,33 @@ if (typeof window !== 'undefined') {
   
   .training-block {
     padding: 1rem;
-    text-align: center;
+   text-align: left;
   }
 }
 
 @media (max-width: 576px) {
   .title-text {
-    font-size: 2rem;
-    letter-spacing: 1px;
+           font-size: 70px;
+        letter-spacing: 1px;
+        line-height: 79px;
   }
   
   .training-title {
-    font-size: 1.4rem;
+   font-size: 40px;
+        text-align: left;
   }
+  .training-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E01F26;
+}
   
   .courses-title {
-    font-size: 1.6rem;
+    font-size: 40px;
   }
   
   .training-video {
@@ -507,8 +534,8 @@ if (typeof window !== 'undefined') {
   }
   
   .course-image img {
-    height: 150px;
-  }
+        height: 245px;
+    }
   
   .training-section {
     padding: 40px 0;

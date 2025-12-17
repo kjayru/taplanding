@@ -203,10 +203,11 @@
 }
 
 @media (max-width: 768px) {
-  .title-text {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
+    .title-text{
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
   
   .main-subtitle {
     font-size: 1.2rem;
@@ -222,10 +223,11 @@
 }
 
 @media (max-width: 576px) {
-  .title-text {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
+  .title-text{
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
   
   .main-subtitle {
     font-size: 1.1rem;

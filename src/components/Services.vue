@@ -221,8 +221,10 @@
 
 @media (max-width: 768px) {
   .title-text {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+          font-size: 53px;
+        letter-spacing: 1px;
+        line-height: 30px;
+
   }
   
   .service-subtitle {
@@ -248,8 +250,10 @@
 
 @media (max-width: 576px) {
   .title-text {
-    font-size: 2rem;
-    letter-spacing: 1px;
+          font-size: 53px;
+        letter-spacing: 1px;
+        line-height: 30px;
+
   }
   
   .service-subtitle {

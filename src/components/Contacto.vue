@@ -400,13 +400,17 @@ const submitForm = async () => {
   }
   
   .contact-title {
-    font-size: 2rem;
+    font-size: 40px;
     letter-spacing: 1px;
   }
   
   .contact-logo .logo-img {
     height: 50px;
   }
+   .contact-form-container{
+        padding: 2rem 1.5rem;
+        margin: 0; 
+    }
 }
 
 @media (max-width: 576px) {
@@ -419,12 +423,17 @@ const submitForm = async () => {
   }
   
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 40px;
   }
   
   .form-control {
     font-size: 0.9rem;
   }
+      .contact-form-container{
+        padding: 2rem 1.5rem;
+        margin: 0; 
+    }
+
 }
 
 /* Animaciones */
