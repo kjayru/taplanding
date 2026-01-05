@@ -166,7 +166,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/commercial-security" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-commercial-security.jpg');">
                                 <img src="/images/industrias-commercial-security.jpg" alt="Commercial Security" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Commercial Security</h3>
@@ -180,7 +180,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/diplomatic-mission" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-diplomatic-industry.jpg');">
                                 <img src="/images/industrias-diplomatic-industry.jpg" alt="Diplomatic Mission" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Diplomatic Mission</h3>
@@ -194,7 +194,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/hospitality-security" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-hospitality-security.jpg');">
                                 <img src="/images/industrias-hospitality-security.jpg" alt="Hospitality Security" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Hospitality Security</h3>
@@ -208,7 +208,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/industrial-security" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-industrial-security.jpg');">
                                 <img src="/images/industrias-industrial-security.jpg" alt="Industrial Security" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Industrial Security</h3>
@@ -222,7 +222,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/medical-security" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-medical-security.jpg');">
                                 <img src="/images/industrias-medical-security.jpg" alt="Medical Security" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Medical Security</h3>
@@ -236,7 +236,7 @@
                         <div class="col-lg-4 col-md-6">
                           <a href="https://tap-security.com/industry/residential-security" target="_blank" rel="noopener noreferrer" class="industry-link">
                             <div class="industry-card">
-                              <div class="industry-image">
+                              <div class="industry-image" style="background-image: url('/images/industrias-residential-security.jpg');">
                                 <img src="/images/industrias-residential-security.jpg" alt="Residential Security" />
                                 <div class="industry-overlay">
                                   <h3 class="industry-title">Residential Security</h3>
@@ -502,12 +502,13 @@
   text-align: center;
   overflow: hidden;
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
-/* Tamaño fijo para desktop */
+/* Altura para desktop */
 @media (min-width: 992px) {
   .industry-card {
-    width: 318px;
+    width: 100%;
     height: 280px;
   }
 }
@@ -532,6 +533,20 @@
 
 .industry-card:hover .industry-image img {
   transform: scale(1.1);
+}
+
+/* Solo desktop: usar background-image */
+@media (min-width: 768px) {
+  .d-none.d-md-block .industry-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .d-none.d-md-block .industry-image img {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .industry-overlay {

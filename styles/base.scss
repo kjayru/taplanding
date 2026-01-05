@@ -268,29 +268,23 @@ body{
     }
 }
 
-@media (max-width: 1361px) {
-
-
+@media (max-width: 1360px) {
     .navbar {
         .nav-link {
-            font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, sans-serif;
-            font-weight: bold;
-            font-size: 11px;
+            font-size: 11px;  // Reducción final de 12px → 11px
         }
         
         .navbar-brand img {
-            max-height: 53px;
+            max-height: 50px;  // Reducir logo proporcionalmente
         }
         
-       
         &__derecha {
-            .btn-danger{
+            .btn-danger {
                 padding: 8px 16px;
                 font-size: 12px;
             }
-           
+            
             .enlace {
-              
                 font-size: 12px;
             }
         }
@@ -299,20 +293,66 @@ body{
  
     .container {
         max-width: 1200px;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     // Espaciado adicional para secciones
     section {
         padding: 80px 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-@media (max-width: 1516px) {
 
-       .navbar {
+// Transición gradual para evitar saltos visuales
+// Paso intermedio: Pantallas medianas-grandes (1600px ↓)
+@media (max-width: 1600px) {
+    .navbar {
         .nav-link {
-            font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, sans-serif;
-            font-weight: bold;
-            font-size: 11px;
+            font-size: 14px;  // Reducción gradual de 16px → 14px
         }
+        
+        &__derecha {
+            .btn-danger {
+                padding: 10px 22px;
+                font-size: 14px;
+            }
+            
+            .enlace {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .container {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+// Paso intermedio 2: Laptops estándar (1440px ↓)
+@media (max-width: 1440px) {
+    .navbar {
+        .nav-link {
+            font-size: 12px;  // Reducción gradual de 14px → 12px
+        }
+        
+        &__derecha {
+            .btn-danger {
+                padding: 9px 18px;
+                font-size: 13px;
+            }
+            
+            .enlace {
+                font-size: 13px;
+            }
+        }
+    }
+    
+    .container {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }

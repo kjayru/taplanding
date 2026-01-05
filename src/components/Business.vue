@@ -370,7 +370,7 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
 
 /* -------- Responsive -------- */
 
-@media(max-width:1361px){
+@media(max-width:1360px){
     .bio-text p {
       font-size: 15px;
       line-height: 1.7;
