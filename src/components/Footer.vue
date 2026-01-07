@@ -105,7 +105,7 @@
             <div class="footer-bottom d-block d-sm-none">
               <div class="footer-bottom-content">
                 <p class="copyright-text text-start">
-                  2025 All Rights Reserved for Texas Asset Protection, LLC ©
+                  2026 All Rights Reserved for Texas Asset Protection, LLC ©
                 </p>
                 <p class="design-credit text-start">
                   Design by: <a href="https://cobos.com.mx" target="_blank" rel="noopener noreferrer" class="cobo-link">Cobo's</a>
@@ -117,7 +117,7 @@
             <div class="footer-bottom d-none d-sm-block">
               <div class="footer-bottom-content">
                 <p class="copyright-text">
-                  2025 All Rights Reserved for Texas Asset Protection, LLC ©
+                  2026 All Rights Reserved for Texas Asset Protection, LLC ©
                 </p>
                 <p class="design-credit text-start">
                   Design by: <a href="https://cobos.com.mx" target="_blank" rel="noopener noreferrer" class="cobo-link">Cobo's</a>
