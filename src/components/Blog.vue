@@ -360,4 +360,12 @@
 .blog-card:hover .blog-image::before {
   left: 100%;
 }
+
+
+@media(min-width:1200px){
+
+    h3, .h3 {
+        font-size: 16px !important;
+    }
+}
 </style>
