@@ -165,7 +165,7 @@ onUnmounted(() => {
     <!-- Navbar estilo dark, sticky y expandible -->
     <nav id="mainNav" class="navbar navbar-expand-lg sticky-top navbar-dark bg-brand-navy"
         style="height: var(--header-h);">
-        <div class="container-fluid px-3 px-lg-5">
+        <div class="container-fluid px-3 ">
             <!-- Hamburger button - Izquierda en móvil -->
             <button class="navbar-toggler collapsed order-1 order-lg-2 border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
                 aria-controls="navContent" aria-expanded="false" aria-label="Alternar navegación">

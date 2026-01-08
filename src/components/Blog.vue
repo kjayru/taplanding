@@ -208,7 +208,7 @@
   box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
 }
 
-@media(max-width:1361px){
+@media(max-width:1360px){
   .blog-article-title{
       font-size: 16px;
   }

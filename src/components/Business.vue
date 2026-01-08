@@ -33,26 +33,20 @@
           <div class="col-lg-5 col-md-12 order-3 order-lg-3 bio-rail p-4">
             <div class="bio-text">
               <p>
-                Oscar was born in San Antonio, Texas and since an early age, he has been in the security
-                industry. He helped manage his father’s 13-year-old investigation and security business at
-                the young age of 17. Throughout his adult years, he has maintained the highest standards
-                in all areas.
+              Oscar was born in San Antonio, Texas and since an early age, he has been in the security industry. He helped manage his father’s 15-year-old investigations and security business at the young age of 17. Throughout the years, he became aware of the many gaps in the security industry.
+             </p>
+              <p>
+                At age 21, Oscar joined the United States Air Force and was stationed in Columbia, SC where he served around the world for the next 7 years.
+                
+               
               </p>
               <p>
-                At age 21, Oscar joined the United States Air Force and was stationed at Laughlin Air
-                Force Base until his honorable discharge in 2005.
+                Throughout his years in the military, he adopted precious tools such as security training, professionalism, honor in excellent work, pride, and service before self.
+
               </p>
               <p>
-                Throughout his years in the military, his personal previous tools such as security training,
-                substance abuse courses, firearm instructor desk, jump entry operations helped in his
-                success.
-              </p>
-              <p>
-                Now a veteran, Oscar remains passionate about changing the security industry. He
-                believes the success of a business is rooted in the satisfaction of one’s clients. Oscar took
-                over the security side of his father’s business and transitioned all of July 2007 to found
-                Texas Asset Protection (aka TAP Security). His vision is to set a new standard for what
-                clients expect from security officers and patrol services.
+              Now a veteran, Oscar remains passionate about changing the security industry. He believes the success of a business is rooted in the satisfaction of one’s clients. Oscar took over the security side of his father’s business and branched off in July 2017 to found Texas Asset Protection (dba TAP Security). His vision is to set a new standard for what clients expect from security officers and patrol services.
+
               </p>
             </div>
           </div>
@@ -370,7 +364,7 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
 
 /* -------- Responsive -------- */
 
-@media(max-width:1361px){
+@media(max-width:1360px){
     .bio-text p {
       font-size: 15px;
       line-height: 1.7;
