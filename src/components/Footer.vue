@@ -52,7 +52,7 @@
             </div>
 
             <!-- More Column -->
-            <div class="col-lg-3 col-md-6 mb-3 col-6 order-4 order-sm-4">
+            <div class="col-lg-3 col-md-6 mb-3 col-6 order-4 order-sm-4 pad__link">
               <div class="footer-links">
                 <h6 class="footer-link-title">&nbsp;&nbsp;</h6>
                 <ul class="footer-nav-list">
@@ -341,6 +341,10 @@
     text-align: left !important;
     display: block;
       width: 100%;
+  }
+  .pad__link {
+        padding-top: 23px;
+        line-height: 14px;
   }
 }
 

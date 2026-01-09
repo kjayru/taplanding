@@ -348,6 +348,14 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
 /* Aumentar logo 20% en desktop */
 @media (min-width: 992px) {
   .join-logo .logo-img { height: 96px; }
+
+   .bio-text p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 1.1rem;
+      text-align: left;
+  }
 }
 .join-title {
   font-size: 50px; font-weight: 900; color: $secondary;
@@ -431,5 +439,16 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
 
 @media (max-width: 576px) {
   .portrait { max-width: 300px; }
+}
+
+@media (min-width: 1200px) {
+
+   .bio-text p {
+      font-size: 15px !important;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 1.1rem;
+      text-align: left;
+  }
 }
 </style>
