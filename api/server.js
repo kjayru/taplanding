@@ -3,6 +3,13 @@ import sgMail from '@sendgrid/mail'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import fetch from 'node-fetch'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+// Configurar __dirname para ES modules
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // Cargar variables de entorno
 dotenv.config()
@@ -17,6 +24,22 @@ const PORT = process.env.PORT || 3001
 app.use(cors())
 app.use(express.json())
 
+// Función para cargar y procesar plantilla HTML
+const loadEmailTemplate = (name, email, message) => {
+  const templatePath = path.join(__dirname, 'plantilla', 'mailing.html')
+  let template = fs.readFileSync(templatePath, 'utf8')
+  
+  // Reemplazar placeholders
+  template = template.replace(/\$\{name\}/g, name)
+  template = template.replace(/\$\{email\}/g, email)
+  template = template.replace(/\$\{message\.replace\(\/\\n\/g, '<br>'\)\}/g, message.replace(/\n/g, '<br>'))
+  template = template.replace(/\$\{new Date\(\)\.toLocaleString\(\)\}/g, new Date().toLocaleString())
+  template = template.replace(/\{\{date\("Y"\)\}\}/g, new Date().getFullYear())
+  template = template.replace(/\{\{env\('APP_URL'\)\}\}/g, 'https://www.txassetpro.com')
+  
+  return template
+}
+
 // Endpoint para enviar emails con Brevo
 app.post('/api/send-email', async (req, res) => {
   try {
@@ -29,6 +52,9 @@ app.post('/api/send-email', async (req, res) => {
         error: 'All fields are required'
       })
     }
+
+    // Cargar plantilla HTML
+    const htmlContent = loadEmailTemplate(name, email, message)
 
     // Configurar email con Brevo
     const brevoEmailData = {
@@ -43,44 +69,7 @@ app.post('/api/send-email', async (req, res) => {
         }
       ],
       subject: `New Contact Form Submission from ${name}`,
-      htmlContent: `
-        <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
-          <div style="background-color: #010B40; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0;">TAP Security</h1>
-            <p style="color: white; margin: 10px 0 0 0;">New Contact Form Submission</p>
-          </div>
-          
-          <div style="background-color: #f8f9fa; padding: 30px; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #010B40; margin-bottom: 20px;">Contact Details</h2>
-            
-            <div style="margin-bottom: 15px;">
-              <strong style="color: #010B40;">Name:</strong>
-              <p style="margin: 5px 0; color: #333;">${name}</p>
-            </div>
-            
-            <div style="margin-bottom: 15px;">
-              <strong style="color: #010B40;">Email:</strong>
-              <p style="margin: 5px 0; color: #333;">${email}</p>
-            </div>
-            
-            <div style="margin-bottom: 15px;">
-              <strong style="color: #010B40;">Message:</strong>
-              <div style="background: white; padding: 15px; border-radius: 5px; margin-top: 5px; border-left: 4px solid #E01F26;">
-                ${message.replace(/\n/g, '<br>')}
-              </div>
-            </div>
-            
-            <div style="margin-top: 30px; padding: 15px; background: white; border-radius: 5px; text-align: center;">
-              <p style="margin: 0; color: #666; font-size: 14px;">
-                This email was sent from the TAP Security website contact form.
-              </p>
-              <p style="margin: 5px 0 0 0; color: #666; font-size: 12px;">
-                Submitted on: ${new Date().toLocaleString()}
-              </p>
-            </div>
-          </div>
-        </div>
-      `,
+      htmlContent: htmlContent,
       replyTo: {
         email: email,
         name: name
@@ -103,7 +92,9 @@ app.post('/api/send-email', async (req, res) => {
       throw new Error(`Brevo API error: ${errorData.message || brevoResponse.statusText}`)
     }
 
-    // Email de confirmación al usuario con Brevo
+    // Email de confirmación al usuario con Brevo (opcional - comentado por ahora)
+    // Si quieres enviar confirmación al usuario, descomenta y crea una plantilla específica
+    /*
     const confirmationEmailData = {
       sender: {
         name: 'TAP Security',
@@ -116,48 +107,7 @@ app.post('/api/send-email', async (req, res) => {
         }
       ],
       subject: 'Thank you for contacting TAP Security',
-      htmlContent: `
-        <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
-          <div style="background-color: #010B40; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0;">TAP Security</h1>
-            <p style="color: white; margin: 10px 0 0 0;">Thank you for your message</p>
-          </div>
-          
-          <div style="background-color: #f8f9fa; padding: 30px; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #010B40;">Hello ${name},</h2>
-            
-            <p style="color: #333; line-height: 1.6;">
-              Thank you for reaching out to TAP Security. We have received your message and one of our team members will get back to you within 24 hours.
-            </p>
-            
-            <div style="background: white; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #E01F26;">
-              <h3 style="color: #010B40; margin: 0 0 10px 0;">Your Message:</h3>
-              <p style="margin: 0; color: #666;">${message.replace(/\n/g, '<br>')}</p>
-            </div>
-            
-            <p style="color: #333; line-height: 1.6;">
-              In the meantime, feel free to explore our website to learn more about our security services and training programs.
-            </p>
-            
-            <div style="text-align: center; margin: 30px 0;">
-              <a href="https://txassetpro.com" 
-                 style="background-color: #E01F26; color: white; padding: 12px 30px; 
-                        text-decoration: none; border-radius: 25px; font-weight: bold;">
-                Visit Our Website
-              </a>
-            </div>
-            
-            <div style="margin-top: 30px; padding: 15px; background: white; border-radius: 5px;">
-              <p style="margin: 0; color: #666; font-size: 14px;">
-                <strong>Contact Information:</strong><br>
-                📧 Email: admin@txassetpro.com<br>
-                📞 Phone: (210) 399-1116<br>
-                📍 Address: 11503 Jones Maltsberger Rd, Ste 1158, San Antonio, TX 78216
-              </p>
-            </div>
-          </div>
-        </div>
-      `
+      htmlContent: loadEmailTemplate(name, email, message) // Usar plantilla
     }
 
     await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -169,6 +119,7 @@ app.post('/api/send-email', async (req, res) => {
       },
       body: JSON.stringify(confirmationEmailData)
     })
+    */
 
 
 
