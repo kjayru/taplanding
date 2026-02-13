@@ -42,8 +42,9 @@
             </div>
             <h4 class="feature-title">Dependable</h4>
             <p class="feature-description">
-              Our Company uses innovative technologies, such as tour tracking, 
-              ensures promptness, accountability, and active awareness of your property.
+             Our security operations are driven by innovative technology and active supervision. 
+             Real-time tour tracking ensures accountability, prompt response, 
+             and continuous awareness of your property.
             </p>
           </div>
         </div>
@@ -56,9 +57,9 @@
             </div>
             <h4 class="feature-title">Professional</h4>
             <p class="feature-description">
-              We pride ourselves in our attention to detail and it's reflected first in our 
-              appearance. We aim to have a strong professional presence in your facility to 
-              deter criminal activity.
+              Our officers are held to the highest standards of appearance, 
+              conduct, and discipline. A strong professional presence on your 
+              site acts as a visible deterrent to criminal activity.
             </p>
           </div>
         </div>

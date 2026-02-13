@@ -25,16 +25,16 @@
         <!-- Contenido derecha -->
         <div class="col-lg-6 col-md-12">
           <div class="service-content">
-            <h3 class="service-subtitle">We strive to combat common objections such as:</h3>
+            <h3 class="service-subtitle">We solve common problems clients experience with security providers:</h3>
             <ul class="service-list">
-              <li>No way to track security officer′s movement or patrol movement to ensure they are fulfilling the contractual agreement</li>
-              <li>Unable to find/reach the security officers when needed</li>
-              <li>Unprofessional behavior, language and use of mobile devices</li>
-              <li>Untidy and unprofessional image</li>
-              <li>Not enforcing the rules/regulations requested by the client</li>
-              <li>Nonspecific or standard daily reports</li>
-              <li>Not following the chain of command</li>
-              <li>Patrol units driving by the site rather than engaging in a full onsite patrol</li>
+              <li>No visibility into security officer patrols or movement</li>
+              <li>Difficulty reaching or locating officers when needed</li>
+              <li>Unprofessional behavior, language, or excessive personal phone use</li>
+              <li>Poor appearance and lack of professionalism</li>
+              <li> Failure to enforce site rules and client directives</li>
+              <li>Generic or incomplete daily activity reports</li>
+              <li>Breakdown in chain of command and accountability</li>
+              <li>“Drive-by patrols” instead of active on-site engagement</li>
             </ul>
           </div>
         </div>
@@ -47,12 +47,12 @@
           <div class="service-content">
             <h3 class="service-subtitle">TAP Security follows a strategic approach grounded in the belief that your security is our business, which provides:</h3>
             <ul class="service-list">
-              <li>Protection of personnel and property</li>
-              <li>Protection against unauthorized access</li>
-              <li>Crime detection and prevention</li>
-              <li>Strict adherence to security measures and procedures</li>
-              <li>Effective communication</li>
-              <li>Cooperation with all local law enforcement agencies</li>
+              <li>Protection of personnel, tenants, and property</li>
+              <li>Controlled access and prevention of unauthorized entry</li>
+              <li>Proactive crime detection and deterrence</li>
+              <li>Strict adherence to site-specific security proceduress</li>
+              <li>Clear, consistent communication with management</li>
+              <li>Professional coordination with local law enforcement when needed</li>
             </ul>
           </div>
         </div>
@@ -77,12 +77,12 @@
           <div class="service-content">
             <h3 class="service-subtitle">We pride ourselves in providing consistent layered security to every client:</h3>
             <ul class="service-list">
-              <li>State certified security officers</li>
-              <li>Security officer tour tracking system</li>
-              <li>24-hour dispatch services</li>
-              <li>GEO fence around your property to keep our officers accountable</li>
-              <li>Daily activity reports providing hourly site activity</li>
-              <li>Customized QR codes to keep our officers active and your site′s soft spots covered</li>
+              <li>State-certified and professionally trained security officers</li>
+              <li>Real-time security officer tour tracking and patrol verification</li>
+              <li>24/7 dispatch and supervisory support</li>
+              <li>Geofencing technology to keep our officers accountable</li>
+              <li>Detailed daily activity reports with hourly site documentation</li>
+              <li>Custom QR and NFC checkpoints to ensure active patrols and your site′s soft spots covered</li>
 
             </ul>
           </div>

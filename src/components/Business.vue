@@ -66,64 +66,30 @@
           </div>
         </div>
 
-
-
-        <div class="row align-items-center justify-content-center g-4">
-          <!-- Spectrum -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-Spectrum-Logo.png" alt="Spectrum" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- Apple -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-apple.png" alt="Apple" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- SRE -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-Consulado-SRE-Blanco.png" alt="SRE Consulado" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- Albany -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-albany.png" alt="Albany" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- CoSA -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/cliente-CoSA-Logo.png" alt="CoSA" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- Catholic Charities -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/cliente-Catholic-Charities.png" alt="Catholic Charities" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- Maruchan -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-maruchan.png" alt="Maruchan" class="img-fluid" />
-            </div>
-          </div>
-
-          <!-- Mexican Culture -->
-          <div class="col-lg-3 col-md-3 col-6">
-            <div class="client-logo">
-              <img src="/images/Cliente-MexicanCultureBlanco.png" alt="Mexican Culture" class="img-fluid" />
-            </div>
-          </div>
+        <!-- Swiper Carousel -->
+        <div class="slider-container">
+          <Swiper
+            :modules="swiperModules"
+            :slides-per-view="1"
+            :space-between="30"
+            :navigation="true"
+            :autoplay="{ delay: 3000, disableOnInteraction: false }"
+            :loop="true"
+            :breakpoints="{
+              576: { slidesPerView: 2, spaceBetween: 20 },
+              992: { slidesPerView: 3, spaceBetween: 25 },
+              1200: { slidesPerView: 4, spaceBetween: 30 }
+            }"
+            class="clients-swiper"
+          >
+            <SwiperSlide v-for="client in clients" :key="client.name">
+              <div class="client-logo-card">
+                <div class="client-logo">
+                  <img :src="client.img" :alt="client.name" class="img-fluid" />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>
@@ -135,7 +101,7 @@
           <!-- Imagen del equipo -->
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
             <div class="join-image">
-              <img src="/images/join-us.jpg" alt="Join TAP Security Team" class="img-fluid" />
+              <img src="/images/group.jpg" alt="Join TAP Security Team" class="img-fluid" />
             </div>
           </div>
 
@@ -162,7 +128,23 @@
 </template>
 
 <script setup>
-// sin props
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+const swiperModules = [Navigation, Autoplay]
+
+const clients = [
+  { name: 'Spectrum', img: '/images/Cliente-Spectrum-Logo.png' },
+  { name: 'Apple', img: '/images/Cliente-apple.png' },
+  { name: 'SRE Consulado', img: '/images/Cliente-Consulado-SRE-Blanco.png' },
+  { name: 'Albany', img: '/images/Cliente-albany.png' },
+  { name: 'CoSA', img: '/images/cliente-CoSA-Logo.png' },
+  { name: 'Catholic Charities', img: '/images/cliente-Catholic-Charities.png' },
+  { name: 'Maruchan', img: '/images/Cliente-maruchan.png' },
+  { name: 'Mexican Culture', img: '/images/Cliente-MexicanCultureBlanco.png' }
+]
 </script>
 
 <style scoped lang="scss">
@@ -334,6 +316,83 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
   filter: brightness(0) invert(1) drop-shadow(0 5px 10px rgba(0,0,0,.3));
 }
 
+/* -------- Swiper Slider -------- */
+.slider-container {
+  padding: 40px 0;
+  position: relative;
+}
+
+.clients-swiper {
+  padding: 20px 60px;
+}
+
+.client-logo-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 30px 20px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.client-logo-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.client-logo-card .client-logo {
+  text-align: center;
+  padding: 0;
+}
+
+.client-logo-card .client-logo img {
+  max-height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: all .3s ease;
+}
+
+.client-logo-card:hover .client-logo img {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1) drop-shadow(0 5px 10px rgba(0,0,0,.3));
+}
+
+/* Navegación personalizada - Flechas estilo referencia */
+:deep(.swiper-button-next),
+:deep(.swiper-button-prev) {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  color: $secondary;
+  transition: all 0.3s ease;
+  
+  &::after {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  &:hover {
+    color: darken($secondary, 10%);
+    transform: scale(1.1);
+  }
+}
+
+:deep(.swiper-button-prev) {
+  left: 0;
+}
+
+:deep(.swiper-button-next) {
+  right: 0;
+}
+
+:deep(.swiper-button-disabled) {
+  opacity: 0.5;
+}
+
 /* -------- Join -------- */
 .join-section { padding: 80px 0; background-color: #ffffff; }
 .join-image { text-align: center; }
@@ -394,6 +453,21 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
   .portrait-wrap {
     min-height: 460px;
   }
+  
+  /* Slider responsive */
+  .clients-swiper {
+    padding: 20px 50px;
+  }
+  
+  :deep(.swiper-button-next),
+  :deep(.swiper-button-prev) {
+    width: 45px;
+    height: 45px;
+    
+    &::after {
+      font-size: 18px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -433,12 +507,35 @@ $bioBg: #6b7280; /* gris pizarra parecido a la referencia */
       height: 1px;
       background-color: #E01F26;
   }
-
-
+  
+  /* Slider móvil */
+  .clients-swiper {
+    padding: 20px 40px;
+  }
+  
+  :deep(.swiper-button-next),
+  :deep(.swiper-button-prev) {
+    width: 40px;
+    height: 40px;
+    
+    &::after {
+      font-size: 16px;
+    }
+  }
 }
 
 @media (max-width: 576px) {
   .portrait { max-width: 300px; }
+  
+  /* Slider móvil pequeño */
+  .clients-swiper {
+    padding: 20px 35px;
+  }
+  
+  .client-logo-card {
+    padding: 20px 15px;
+    min-height: 120px;
+  }
 }
 
 @media (min-width: 1200px) {
