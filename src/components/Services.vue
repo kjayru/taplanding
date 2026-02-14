@@ -50,7 +50,7 @@
               <li>Protection of personnel, tenants, and property</li>
               <li>Controlled access and prevention of unauthorized entry</li>
               <li>Proactive crime detection and deterrence</li>
-              <li>Strict adherence to site-specific security proceduress</li>
+              <li>Strict adherence to site-specific security procedures</li>
               <li>Clear, consistent communication with management</li>
               <li>Professional coordination with local law enforcement when needed</li>
             </ul>
