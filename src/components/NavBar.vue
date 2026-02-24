@@ -218,7 +218,7 @@ onUnmounted(() => {
                 <!-- CLIENT LOGIN y USER LOGIN en móvil -->
                 <div class="d-lg-none text-center pb-4 seccion__movil">
                     <a href="https://tapsecurity.staffr.net/" target="_blank" rel="noopener noreferrer" class="d-inline-block link-login-mobile px-4 py-2 mx-2">CLIENT LOGIN</a>
-                    <a href="https://tap-security.com/login" target="_blank" rel="noopener noreferrer" class="d-inline-block link-login-mobile px-4 py-2 mx-2">USER LOGIN</a>
+                    <a href="https://tap-security.com/login" target="_blank" rel="noopener noreferrer" class="d-inline-block link-login-mobile px-4 py-2 mx-2">COURSE LOGIN</a>
                 </div>
 
                 <!-- Social icons en móvil -->
@@ -240,7 +240,7 @@ onUnmounted(() => {
 
 
                     <a href="https://tapsecurity.staffr.net/" target="_blank" rel="noopener noreferrer" class="link-login enlace">CLIENT LOGIN</a>
-                    <a href="https://tap-security.com/login" target="_blank" rel="noopener noreferrer" class="link-login enlace">USER LOGIN</a>
+                    <a href="https://tap-security.com/login" target="_blank" rel="noopener noreferrer" class="link-login enlace">COURSE LOGIN</a>
 
 
                     <!-- Social -->
